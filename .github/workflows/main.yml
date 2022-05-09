@@ -5,7 +5,6 @@ on:
     branches: [ main ]
   issue_comment:
     types: [ main ]
-
 jobs:
   execute:
     runs-on: ubuntu-latest
