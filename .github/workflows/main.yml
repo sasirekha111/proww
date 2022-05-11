@@ -6,6 +6,15 @@ on:
   issue_comment:
     types: [ main ]
 jobs:
+  hello_world_job:
+    runs-on: windows-latest
+    continue-on-error: true
+    name: Build and Analyse
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Set up JDK 11
   execute:
     runs-on: ubuntu-latest
     steps:
