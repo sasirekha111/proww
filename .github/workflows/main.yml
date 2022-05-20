@@ -6,6 +6,13 @@ on:
  pull_request:
     branches: [ main ] 
 jobs:
+  execute:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: jpmcb/prow-github-actions@v1
+        with:
+          prow-commands: area
+          github-token: "${{ secrets.GITHUB_TOKEN }}"
   triage:
     permissions:
       contents: read
