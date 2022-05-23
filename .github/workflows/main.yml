@@ -11,8 +11,8 @@ jobs:
     steps:
       - uses: jpmcb/prow-github-actions@v1.1.3
         with:
-          prow-commands:  /assign 
-             /unassign 
+          prow-commands:  '/assign 
+            /unassign 
             /approve 
             /retitle 
             /area 
@@ -26,8 +26,8 @@ jobs:
             /milestone 
             /hold 
             /cc 
-            /uncc
-          github-token: "${{ secrets.GITHUB_TOKEN }}"
+            /uncc'
+         
   triage:
     permissions:
       contents: read
