@@ -33,6 +33,6 @@ jobs:
               /'priority' 
               /'remove' 
               /'lgtm' 
-              /'close',
+              /'close'
           github-token: "${{ secrets.GITHUB_TOKEN }}"
       
