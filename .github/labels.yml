@@ -4,5 +4,9 @@ area:
   - 'important'
 
 # File globs for PR labeler
-tests:
-  - '**/*.test.ts'
+kind:
+  - 'failing-test'
+  - 'cleanup'
+  
+source:
+  - 'src/**'  
