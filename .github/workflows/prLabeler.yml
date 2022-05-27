@@ -1,12 +1,12 @@
-name: "Build and test code"
-on: [push, pull_request]
+name: "Label PRs from globs"
+on:
+- pull_request_target
 
 jobs:
-  build-test:
+  triage:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
-    - run: |
-        npm install
-        npm run build
-        npm run test
+    - uses: actions/labeler@main
+      with:
+        repo-token: "${{ secrets.GITHUB_TOKEN }}"
+        configuration-path: .github/labels.yaml
