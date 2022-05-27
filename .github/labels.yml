@@ -1,14 +1,17 @@
-# labels to be used with /area command
 area:
   - 'bug'
   - 'important'
 
-# File globs for PR labeler
 kind:
   - 'failing-test'
   - 'cleanup'
+
 priority:
   - 'low'
-  - 'high'  
+  - 'high'
+
+tests:
+  - '**/*.test.ts'
+
 source:
-  - 'src/**'  
+  - 'src/**'
